@@ -144,48 +144,6 @@ false. https://cloud.google.com/kubernetes-engine/docs/how-to/preemptible-vms
 EOF
 }
 
-//variable "vpc_network_name" {
-//  type = string
-//  default = "vpc-network"
-
-//  description = <<EOF
-//The name of the Google Compute Engine network to which the cluster is
-//connected.
-//EOF
-//}
-
-//variable "vpc_subnetwork_name" {
-//  type = string
-//  default = "vpc-subnetwork"
-
-//  description = <<EOF
-//The name of the Google Compute Engine subnetwork in which the cluster's
-//instances are launched.
-//EOF
-//}
-
-//variable "cluster_secondary_range_name" {
-//  type = string
-//  default = "pod-tier"
-
-//  description = <<EOF
-//The name of the secondary range to be used as for the cluster CIDR block.
-//The secondary range will be used for pod IP addresses. This must be an
-//existing secondary range associated with the cluster subnetwork.
-//EOF
-//}
-
-//variable "services_secondary_range_name" {
-//  type = string
-//  default = "service-tier"
-
-//  description = <<EOF
-//The name of the secondary range to be used as for the services CIDR block.
-//The secondary range will be used for service ClusterIPs. This must be an
-//existing secondary range associated with the cluster subnetwork.
-//EOF
-//}
-
 variable "cluster_ipv4_cidr_block" {
   type = string
   default = "10.32.0.0/14"
@@ -196,16 +154,6 @@ range will be used for assigning internal IP addresses to the cluster or set
 of cluster, as well as the ILB VIP. 
 EOF
 }
-
-//variable "access_private_images" {
-//  type    = string
-//  default = "false"
-
-//  description = <<EOF
-//Whether to create the IAM role for storage.objectViewer, required to access
-//GCR for private container images.
-//EOF
-//}
 
 variable "http_load_balancing_disabled" {
   type = string
